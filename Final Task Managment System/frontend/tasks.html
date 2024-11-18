@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Task Management</h1>
+        <form id="taskForm" class="mt-4">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" class="form-control" placeholder="Enter task title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" class="form-control" rows="3" placeholder="Enter task description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="priority">Priority</label>
+                <select id="priority" class="form-control">
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status" class="form-control">
+                    <option>Yet-to-start</option>
+                    <option>In-progress</option>
+                    <option>Completed</option>
+                    <option>Hold</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="deadline">Deadline</label>
+                <input type="date" id="deadline" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Add Task</button>
+        </form>
+
+        <h3 class="mt-5">Task List</h3>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Deadline</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="taskList">
+                <!-- Dynamic Task Rows -->
+            </tbody>
+        </table>
+    </div>
+    <script src="js/tasks.js"></script>
+</body>
+</html>
